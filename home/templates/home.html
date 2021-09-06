@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    home
+{% endblock %}
+{% block css_files %}
+    {% load static %}
+    <link rel="StyleSheet" href="{% static 'css/default.css' %}"/>
+{% endblock %}
+
+{% block body %}
+    <section id='up'>
+        <div id='posts'>content</div>
+        <aside>
+            <a href='/admin'>admin</a>
+        </aside>
+    </section>
+{% endblock %}
+
+{% block js_files %}
+{% endblock %}

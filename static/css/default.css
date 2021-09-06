@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body {
+    background-color: #333;
+}
+#content-page {
+    position: relative;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+}
+header h1 {
+    position: relative;
+    display: block;
+    margin: 0 1em;
+}
+header h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+#up {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+}
+#posts {
+    padding: 1em;
+}
