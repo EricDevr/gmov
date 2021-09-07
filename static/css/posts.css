@@ -1,0 +1,40 @@
+#posts {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: .2em;
+}
+.card {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 70%;
+    text-decoration: none;
+    overflow: hidden;
+}
+.image {
+    position: relative;
+    display: block;
+    width: 100%; height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.tl {
+    position: relative;
+    display: flex;
+    width: 100%; height: 100%;
+    align-items: center;
+    padding: 0 1em;
+}
+.tl p {
+    position: relative;
+    display: block;
+    color: #333;
+    word-wrap: break-word;
+}
+
+@media (max-width: 700px) {
+    #posts {
+        grid-template-columns: 1fr;
+    }
+}

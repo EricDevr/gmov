@@ -6,13 +6,24 @@
 {% block css_files %}
     {% load static %}
     <link rel="StyleSheet" href="{% static 'css/default.css' %}"/>
+    <link rel="StyleSheet" href="{% static 'css/posts.css' %}"/>
 {% endblock %}
 
 {% block body %}
     <section id='up'>
-        <div id='posts'>content</div>
+        <div id='posts'>
+            {% for post in posts %}
+            <a href="" class="card">
+                <img src="{{ post.image.url }}" class="image">
+                <div class="tl">
+                    <p>{{ post.title }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
         <aside>
             <a href='/admin'>admin</a>
+            <a href="{% url 'publicar' %}">publicar</a>
         </aside>
     </section>
 {% endblock %}
