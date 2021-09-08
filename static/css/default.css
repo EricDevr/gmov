@@ -7,27 +7,45 @@
 body {
     background-color: #333;
 }
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 #content-page {
     position: relative;
     display: block;
     width: 50%;
     margin: 0 auto;
-    background-color: aliceblue;
+    background-color: #444;
 }
 header {
     position: relative;
-    display: inline-block;
+    display: flex;
     width: 100%;
     padding: 1em;
+    align-items: center;
+}
+#home {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 12px;
+    padding: .5em 1em;
+    color: #fff;
+    border: 1px outset #555;
+    border-radius: 3px;
+}
+#home:active {
+    border-style: inset;
 }
 header h1 {
     position: relative;
     display: block;
-    margin: 0 1em;
+    margin: 0 auto;
 }
 header h1 a {
     text-decoration: none;
-    color: #333;
+    color: aliceblue;
 }
 
 #up {
@@ -38,6 +56,21 @@ header h1 a {
 }
 #posts {
     padding: 1em;
+}
+
+aside {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1em;
+}
+aside a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: .5em;
+    text-decoration: none;
+    color: #fff;
 }
 
 @media (max-width: 700px) {

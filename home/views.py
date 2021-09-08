@@ -3,12 +3,16 @@ from .models import Posts
 from .forms import PostForm
 # Create your views here.
 def home(request):
-    posts = Posts.objects.all().order_by("-id")
+    posts = Posts.objects.all().order_by("-id")[1:10]
+    por = portada()
     context = {
+        'portada': por,
         'posts': posts
     }
     return render(request, 'home.html', context)
-
+def portada():
+    por = Posts.objects.last()
+    return por;
 def publicar(request):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES)
@@ -26,3 +30,10 @@ def publicar(request):
         'form': form,
     }
     return render(request, 'publicar.html', context)
+
+def post(request, idu, titleu):
+    article = Posts.objects.get(id=idu)
+    context = {
+        'post': article,
+    }
+    return render(request, 'post.html', context)

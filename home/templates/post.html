@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+{% block css_files %}
+    {% load static %}
+    <link rel="StyleSheet" href="{% static 'css/post.css' %}"/>
+{% endblock %}
+
+{% block body %}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v11.0" nonce="ZucQReKL"></script>
+<section id="up">
+    <section id="post">
+        <h1 id="title">{{ post.title }}</h1>
+        <img src="{{ post.image.url }}" id="image">
+        <span id="data">{{ post.date }} {{ post.user }}</span>
+        <p id="content-post">{{ post.content }}</p>
+        
+        <section id="comments-content">
+        <div class="fb-comments" data-href="http://127.0.0.1:8000/post/{{ post.id }}/{{ post.slug }}/" data-width="100%" data-numposts="5" data-lazy="true" data-colorscheme="light"></div>
+        </section>
+    </section>
+    <aside>
+        <a href='/admin'>admin</a>
+        <a href="{% url 'publicar' %}">publicar</a>
+    </aside>
+</section>
+{% endblock %}
+
+{% block js_files %}
+{% endblock %}

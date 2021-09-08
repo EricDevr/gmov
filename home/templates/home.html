@@ -5,21 +5,31 @@
 {% endblock %}
 {% block css_files %}
     {% load static %}
-    <link rel="StyleSheet" href="{% static 'css/default.css' %}"/>
     <link rel="StyleSheet" href="{% static 'css/posts.css' %}"/>
 {% endblock %}
 
 {% block body %}
     <section id='up'>
-        <div id='posts'>
+        <div id='left'>
+            <div id="portada">
+                <a href="{% url 'post' portada.id portada.slug %}" class="portada">
+                    <img src="{{ portada.image.url }}">
+                    <span>{{ portada.date }} {{ portada.user }}</span>
+                    <p>{{ portada.title }}</p>
+                </a>
+            </div>
+            
+            <div id="posts">
             {% for post in posts %}
-            <a href="" class="card">
+            <a href="{% url 'post' post.id post.slug %}" class="card">
                 <img src="{{ post.image.url }}" class="image">
                 <div class="tl">
                     <p>{{ post.title }}</p>
+                    <span>{{ post.date }} {{ post.user }}</span>
                 </div>
             </a>
             {% endfor %}
+            </div>
         </div>
         <aside>
             <a href='/admin'>admin</a>
