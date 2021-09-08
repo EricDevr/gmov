@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: 'Encode Sans', sans-serif;
 }
 body {
     background-color: #333;
@@ -30,6 +32,7 @@ header {
     text-decoration: none;
     font-variant: small-caps;
     font-size: 12px;
+    font-weight: bolder;
     padding: .5em 1em;
     color: #fff;
     border: 1px outset #555;

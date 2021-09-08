@@ -10,6 +10,7 @@
     display: inline-block;
     width: 100%;
     margin-bottom: 1em;
+    font-weight: bolder;
 }
 #image {
     position: relative;
@@ -23,6 +24,7 @@
     display: inline-block;
     width: 100%;
     font-size: 9px;
+    font-weight: bolder;
     padding: 1em 0;
 }
 #content-post {
@@ -31,6 +33,7 @@
     width: 100%;
     white-space: pre-wrap;
     word-wrap: break-word;
+    font-weight: bolder;
     color: #333;
 }
 .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {

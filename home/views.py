@@ -7,7 +7,7 @@ def home(request):
     por = portada()
     context = {
         'portada': por,
-        'posts': posts
+        'posts': posts,
     }
     return render(request, 'home.html', context)
 def portada():
@@ -33,7 +33,12 @@ def publicar(request):
 
 def post(request, idu, titleu):
     article = Posts.objects.get(id=idu)
+    recom = recoms(idu)
     context = {
         'post': article,
+        'recoms': recom,
     }
     return render(request, 'post.html', context)
+def recoms(idu):
+    posts = Posts.objects.all().exclude(id=idu).order_by('-id')[:6]
+    return posts
