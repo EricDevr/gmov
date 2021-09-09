@@ -25,7 +25,11 @@
                 <img src="{{ post.image.url }}" class="image">
                 <div class="tl">
                     <p>{{ post.title }}</p>
-                    <span>{{ post.date }} {{ post.user }}</span>
+                    <span>
+                    <b>➕ {{ post.likes }} </b>
+                    <b>✖️ {{ post.dislikes }}</b>
+                    {{ post.date }} {{ post.user }}
+                    </span>
                 </div>
             </a>
             {% endfor %}

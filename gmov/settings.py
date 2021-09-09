@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+"""
+    gmov key: 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
+"""
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
